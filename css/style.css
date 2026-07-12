@@ -1,102 +1,362 @@
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #0f172a;
-      background: #f8fafc;
-      line-height: 1.6;
-    }
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #ffffff;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-    .hero {
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
-      color: white;
-      padding: 90px 8%;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      background: #06b6d4;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 70px 8%;
-    }
-    section h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #0f172a;
-    }
-    .intro {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-      color: #475569;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-      border-top: 4px solid #2563eb;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #1d4ed8;
-    }
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      color: #0f172a;
-    }
-    .highlight {
-      background: #e0f2fe;
-    }
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 35px 8%;
-    }
-    footer a {
-      color: #06b6d4;
-      text-decoration: none;
-    }
+/* ===========================================
+   Nexsom Technology Website V2
+   =========================================== */
+
+:root{
+
+  --primary-navy:#00245C;
+  --dark-navy:#001F54;
+  --primary-orange:#FF6A00;
+
+  --white:#FFFFFF;
+  --soft-bg:#F8FAFC;
+  --text-gray:#64748B;
+  --border-gray:#E2E8F0;
+
+  --container:1200px;
+
+  --radius:16px;
+
+  --shadow:
+  0 10px 35px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    Inter,
+    Segoe UI,
+    Arial,
+    sans-serif;
+
+    background:var(--soft-bg);
+
+    color:var(--primary-navy);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+/* ---------------- Header ---------------- */
+
+.site-header{
+
+    background:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    border-bottom:1px solid var(--border-gray);
+
+}
+
+.header-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:80px;
+
+}
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.brand-mark{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:var(--primary-orange);
+
+    color:white;
+
+    display:grid;
+
+    place-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.brand-name{
+
+    display:block;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--primary-navy);
+
+}
+
+.brand-tagline{
+
+    display:block;
+
+    font-size:13px;
+
+    color:var(--text-gray);
+
+}
+
+.main-nav{
+
+    display:flex;
+
+    gap:32px;
+
+}
+
+.main-nav a{
+
+    color:var(--primary-navy);
+
+    font-weight:600;
+
+}
+
+.main-nav a:hover{
+
+    color:var(--primary-orange);
+
+}
+
+/* ---------------- Buttons ---------------- */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary-orange);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    border:1px solid var(--border-gray);
+
+    color:var(--primary-navy);
+
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero{
+
+    padding:90px 0;
+
+}
+
+.hero-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.eyebrow{
+
+    display:inline-block;
+
+    color:var(--primary-orange);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    margin-bottom:24px;
+
+}
+
+.hero p{
+
+    color:var(--text-gray);
+
+    font-size:18px;
+
+    max-width:620px;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:40px;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.dashboard-top{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:25px;
+
+}
+
+.dashboard-top span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:var(--primary-orange);
+
+}
+
+.dashboard-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.mini-card{
+
+    background:var(--soft-bg);
+
+    border-radius:14px;
+
+    padding:20px;
+
+}
+
+.mini-card strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--primary-navy);
+
+}
+
+.mini-card span{
+
+    color:var(--text-gray);
+
+    font-size:14px;
+
+}
