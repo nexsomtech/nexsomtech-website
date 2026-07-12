@@ -1,308 +1,162 @@
-# Nexsom Technology
-# Decisions Log
+# Nexsom Technology Website
+# Website Decisions Register
 
-**Version:** 1.0  
-**Project:** Nexsom Technology Website  
+**Document ID:** NT-WEB-DEC-001  
+**Version:** 1.0.0  
 **Status:** Active  
-**Purpose:** Record major business, branding, and technical decisions.
+**Effective Date:** 12 July 2026  
+**Product:** Nexsom Technology Website  
+**Owner:** Nexsom Technology  
+**Classification:** Product Governance  
+**Repository:** `nexsomtech-website`  
+**Source Format:** Markdown  
 
 ---
 
-## Decision 001 — Company Name
+## 1. Purpose
 
-**Decision:** Use the name **Nexsom Technology**.
+This register records the approved decisions that govern the design, architecture, development, deployment, maintenance, and future expansion of the Nexsom Technology website.
 
-**Reason:** The name represents next-generation Somali technology solutions and is suitable for future expansion into software, POS systems, dashboards, AI, mobile apps, and IT consulting.
+It contains only website-specific decisions.
 
----
+Company-level decisions, including corporate identity, company purpose, brand governance, management-system rules, and enterprise technology direction, are maintained separately in:
 
-## Decision 002 — Company Slogan
+> `nexsom-company-governance/docs/DECISIONS.md`
 
-**Decision:** Use the slogan **Smart Technology for Growing Businesses**.
-
-**Reason:** The slogan is clear, practical, business-focused, and easy for customers to understand.
+The website must comply with approved company governance and corporate standards.
 
 ---
 
-## Decision 003 — Domain
+## 2. Decision Status Definitions
 
-**Decision:** Register and use:
+- **Active:** The decision is currently approved and applicable.
+- **Superseded:** The decision has been replaced by a later approved decision.
+- **Retired:** The decision is no longer applicable but remains recorded for traceability.
+- **Planned:** The decision is approved in principle but has not yet been fully implemented.
 
-nexsomtech.com
-
-**Reason:** The domain is short, professional, brand-aligned, and suitable for long-term business growth.
-
----
-
-## Decision 004 — Domain Registrar and DNS
-
-**Decision:** Use Cloudflare for domain registration and DNS.
-
-**Reason:** Cloudflare provides strong DNS management, security, SSL, performance tools, and future scalability.
+Approved decisions must not be deleted solely because they have been replaced. Superseded and retired decisions must remain recorded with the relevant replacement reference.
 
 ---
 
-## Decision 005 — Email
+# Website Decisions
 
-**Decision:** Use Zoho Mail for business email.
+## Decision WD-001 — Website Hosting and Deployment
 
-**Reason:** Zoho provides professional domain-based email at low cost and supports business growth.
+**Legacy Reference:** Decision 006  
+**Status:** Active  
 
-Primary email:
+**Decision:**  
+Cloudflare Pages shall be used as the current website hosting and deployment platform.
 
-info@nexsomtech.com
+Cloudflare may also provide:
 
----
+- DNS integration
+- SSL
+- Security controls
+- Performance services
+- Deployment integration
+- Edge delivery
 
-## Decision 006 — Hosting and Deployment
+**Reason:**  
+Cloudflare provides suitable free hosting, automated deployment, SSL, security, and performance for the current website stage.
 
-**Decision:** Use Cloudflare Workers/Pages for website deployment.
+**Expected Benefit:**  
+Provides a reliable and cost-effective deployment environment while Nexsom develops its business and technical capacity.
 
-**Reason:** It provides fast global hosting, automatic deployment, SSL, and integration with GitHub.
-
----
-
-## Decision 007 — Source Code Management
-
-**Decision:** Use GitHub for source code and version control.
-
-**Reason:** GitHub provides professional version history, branches, collaboration, rollback, and integration with Cloudflare.
-
----
-
-## Decision 008 — Development Tool
-
-**Decision:** Use Visual Studio Code.
-
-**Reason:** VS Code is lightweight, professional, widely used, and suitable for HTML, CSS, JavaScript, PHP, Laravel, and future frameworks.
+**Governance Note:**  
+Cloudflare is a current service provider. The website must not become structurally dependent on Cloudflare-specific features that prevent practical migration.
 
 ---
 
-## Decision 009 — Branch Strategy
+## Decision WD-002 — Source Repository
 
-**Decision:** Keep production code on `main` and develop Version 2 on `website-v2`.
+**Status:** Active  
 
-**Reason:** This protects the live website while allowing safe development and testing.
+**Decision:**  
+The official website source repository is:
 
----
+> `nexsomtech-website`
 
-## Decision 010 — Initial Website Architecture
+The repository shall contain:
 
-**Decision:** Start with static HTML, CSS, and JavaScript.
+- Website source code
+- Website assets
+- Website configuration
+- Website-specific documentation
+- Website decisions
+- Website roadmap
+- Website changelog
+- Website development standards
 
-**Reason:** This is fast, affordable, simple to maintain, and suitable for the first business website. React or Next.js can be introduced later when the business requires more advanced features.
+**Reason:**  
+The website requires a dedicated product repository with clear ownership and an independent development history.
 
----
-
-## Decision 011 — Project Structure
-
-**Decision:** Separate files into clear folders:
-
-- css
-- js
-- images
-- docs
-
-**Reason:** This keeps the project clean, scalable, and easier to maintain.
-
----
-
-## Decision 012 — Language Strategy
-
-**Decision:** Use English as the primary language and Somali as the secondary language.
-
-**Reason:** English supports professional, donor, institutional, and international positioning. Somali supports local business customers and accessibility.
-
-Planned structure:
-
-- index.html — English
-- so.html — Somali
+**Expected Benefit:**  
+Separates website implementation from company governance and future Nexsom products.
 
 ---
 
-## Decision 013 — Brand Colors
+## Decision WD-003 — Website Branch Strategy
 
-**Decision:** Use the following brand palette:
+**Legacy Reference:** Decision 009  
+**Status:** Active  
 
-- Primary Navy: #00245C
-- Dark Navy: #001F54
-- Primary Orange: #FF6A00
-- White: #FFFFFF
-- Soft Background: #F8FAFC
-- Body Text Gray: #64748B
-- Border Gray: #E2E8F0
+**Decision:**  
+The website shall use the following branch structure:
 
-**Reason:** Navy communicates trust and professionalism. Orange communicates energy, innovation, and action.
+- `main` — production website
+- `website-v2` — Website Version 2 development
 
----
+Development changes must be completed and reviewed on `website-v2` before being merged into `main`.
 
-## Decision 014 — Documentation First
+**Reason:**  
+The production website must remain protected while Website V2 is developed and tested.
 
-**Decision:** Create documentation before expanding the website.
-
-**Reason:** Documentation creates consistency, improves future collaboration, and prevents random technical decisions.
+**Expected Benefit:**  
+Reduces deployment risk, protects the live website, and provides controlled development history.
 
 ---
 
-## Decision 015 — Version 1 Backup
+## Decision WD-004 — Initial Website Architecture
 
-**Decision:** Preserve the original homepage as `index-v1.html`.
+**Legacy Reference:** Decision 010  
+**Status:** Active  
 
-**Reason:** This allows comparison between Version 1 and Version 2 and provides an easy reference point.
+**Decision:**  
+Website V2 shall initially be developed using standard:
 
----
+- HTML
+- CSS
+- JavaScript
 
-## Decision 016 — Future Direction
+A framework such as React, Vue, Svelte, Astro, Next.js, or another technology shall not be introduced unless a clear functional, operational, or commercial requirement justifies it.
 
-**Decision:** Build Nexsom Technology toward a full technology ecosystem.
+**Reason:**  
+The current website does not require unnecessary framework complexity.
 
-Future products may include:
-
-- POS System
-- Inventory Management
-- Restaurant POS
-- Pharmacy POS
-- ERP
-- Dashboards
-- AI Services
-- Mobile Apps
-- Customer Portal
-
-**Reason:** The company should be positioned as a scalable technology business, not only a website or POS reseller.
+**Expected Benefit:**  
+Provides fast performance, low operating cost, full code ownership, simple maintenance, and high portability.
 
 ---
 
-# Engineering Philosophy
+## Decision WD-005 — Website Project Structure
 
-Every Nexsom product should be:
+**Legacy Reference:** Decision 011  
+**Status:** Active  
 
-1. Professional
-2. Simple
-3. Scalable
-4. Reliable
-5. Useful
+**Decision:**  
+The website repository shall maintain a clear file structure.
 
----
+The current approved structure includes:
 
-# Rule
-
-Every major future decision must be added to this file with:
-
-- Decision
-- Reason
-- Expected benefit
-
----
-
-## Decision 017 — Core Project Principle
-
-**Decision:** Adopt the following core principle:
-
-> We are not building a website. We are building a technology company.
-
-**Reason:** Nexsom Technology is being developed as a long-term technology company with future software, hardware, POS, ERP, mobile apps, cloud services, and customer platforms. The website is the first digital product, not the final destination.
-
-**Expected Benefit:** Ensures every future decision supports the long-term company vision.
-
----
-
-## Decision 018 — Brand System Document
-
-**Decision:** Replace the previous Brand Guide approach with:
-
-**Nexsom Technology Brand System**  
-Document ID: NT-BS-001  
-Version: 1.0.0  
-Status: Official Corporate Standard
-
-**Reason:** Nexsom requires a company-wide brand system that governs website, software, hardware, packaging, communication, UI, and future products.
-
-**Expected Benefit:** Creates one official source of truth for the Nexsom brand.
-
----
-
-## Decision 019 — Official Tagline
-
-**Decision:** Adopt the official public tagline:
-
-> Smart Solutions. Stronger Businesses.
-
-**Reason:** The tagline is short, memorable, customer-focused, and suitable for software, hardware, services, and future Nexsom products.
-
-**Expected Benefit:** Strengthens brand clarity and customer positioning.
-
----
-
-## Decision 020 — Internal Motto
-
-**Decision:** Adopt the internal company motto:
-
-> Build with purpose. Deliver with excellence.
-
-**Reason:** This motto guides internal culture, engineering quality, product development, and customer support.
-
-**Expected Benefit:** Aligns internal execution with professional standards.
-
----
-
-## Decision 021 — Company Purpose
-
-**Decision:** Adopt the company purpose:
-
-> To empower businesses through practical technology that simplifies operations, strengthens decision-making, and creates sustainable growth.
-
-**Reason:** The purpose defines why Nexsom Technology exists beyond selling products or services.
-
-**Expected Benefit:** Provides long-term direction for strategy, branding, and product development.
-
----
-
-## Decision 022 — Long-Term Promise
-
-**Decision:** Adopt the long-term customer promise:
-
-> Every solution we deliver should leave our customers stronger than before they chose Nexsom.
-
-**Reason:** This promise reinforces customer success as the foundation of the business.
-
-**Expected Benefit:** Ensures products and services create measurable customer value.
-
----
-
-## Decision 023 — Nexsom DNA
-
-**Decision:** Adopt the five Nexsom DNA traits:
-
-1. Practical Innovation  
-2. Customer Success  
-3. Reliability  
-4. Simplicity  
-5. Continuous Improvement
-
-**Reason:** These principles define how Nexsom thinks, builds, serves, and improves.
-
-**Expected Benefit:** Creates a clear cultural and operational foundation for the company.
-
----
-
-## Decision 024 — One Completed Step at a Time
-
-**Decision:** Adopt the workflow rule:
-
-> One completed step at a time.
-
-**Reason:** The project requires controlled execution, review, and approval before moving to the next step.
-
-**Expected Benefit:** Reduces mistakes, improves quality, and keeps the project manageable.
-
----
-
-## Decision 025 — Governance Synchronization
-
-**Decision:** Adopt the rule:
-
-> Every approved decision must be reflected in the project's governance documents before new development begins.
-
-**Reason:** The governance documents must stay aligned with actual project decisions.
-
-**Expected Benefit:** Prevents confusion, preserves institutional memory, and supports professional project management.
+```text
+nexsomtech-website/
+├── css/
+├── docs/
+├── images/
+├── js/
+├── .gitignore
+├── index-v1.html
+├── index.html
+├── README.md
+└── wrangler.jsonc
