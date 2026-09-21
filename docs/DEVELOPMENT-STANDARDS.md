@@ -1,393 +1,232 @@
-# Nexsom Technology
-# Development Standards
+# Nexsom Technology Website
+# Website Development Standards
 
-**Version:** 1.0
-**Project:** Nexsom Technology Website
-**Status:** Active
-**Last Updated:** July 2026
-
----
-
-# Vision
-
-Build technology products that are modern, scalable, secure, maintainable, and user-friendly.
-
-Every feature should improve the customer experience while maintaining high engineering quality.
-
----
-
-# Core Principles
-
-1. Build for the future.
-2. Simplicity over complexity.
-3. Mobile-first design.
-4. Performance matters.
-5. Security by design.
-6. Accessibility matters.
-7. Reusable components.
-8. Clean code.
-9. Consistent branding.
-10. Continuous improvement.
+**Document ID:** NT-WEB-DEV-001  
+**Document Version:** 2.0.0  
+**Status:** Active  
+**Effective Date:** 21 September 2026  
+**Product:** Nexsom Technology Website  
+**Owner:** Nexsom Technology  
+**Classification:** Product Governance / Engineering Standard  
+**Repository:** `nexsomtech-website`  
+**Primary Branch:** `main`  
+**Development Branch:** `website-v2`  
+**Source Format:** Markdown  
 
 ---
 
-# Branding
+## 1. Purpose
 
-Company Name
+This document defines the engineering and implementation standards for the Nexsom Technology website.
 
-Nexsom Technology
+Its purpose is to ensure that Website V2 and future website improvements remain:
 
-Slogan
+- Professional
+- Maintainable
+- Secure
+- Accessible
+- Responsive
+- Fast
+- Standards-based
+- Portable
+- Migration-ready
+- Consistent with Nexsom company governance
 
-Smart Technology for Growing Businesses
+This document governs website development only.
 
----
-
-# Official Brand Colors
-
-Primary Navy
-
-#00245C
-
-Dark Navy
-
-#001F54
-
-Primary Orange
-
-#FF6A00
-
-White
-
-#FFFFFF
-
-Soft Background
-
-#F8FAFC
-
-Body Text
-
-#64748B
-
-Border
-
-#E2E8F0
+It does not define company-wide brand, business, or management-system policy.
 
 ---
 
-# Typography
+## 2. Authority and Governance
 
-Primary Font
+Website development must follow approved Nexsom governance in the following order:
 
-Inter
+1. Nexsom company governance
+2. Corporate Brand System
+3. Website Technology Strategy
+4. Website Architecture
+5. Website Development Standards
+6. Website Decisions Register
+7. Website Roadmap
+8. Implementation tasks
 
-Fallback
+Where documents conflict, the higher-authority document governs until the conflict is formally resolved.
 
-Segoe UI
+The authoritative Corporate Brand System is maintained in:
 
-Arial
+> `nexsom-company-governance/docs/BRAND-SYSTEM.md`
 
-sans-serif
+The authoritative Website Decisions Register is maintained in:
+
+> `nexsomtech-website/docs/DECISIONS.md`
+
+The Website Changelog is maintained in:
+
+> `nexsomtech-website/docs/CHANGELOG.md`
 
 ---
 
-# Folder Structure
+## 3. Website Development Objective
 
+The Nexsom website must provide a professional, trustworthy, clear, and efficient digital experience while remaining technically simple enough to maintain and flexible enough to support future growth.
+
+Website implementation should strengthen:
+
+- Customer confidence
+- Business credibility
+- Product visibility
+- Usability
+- Performance
+- Maintainability
+- Security
+- Future integration capability
+
+---
+
+## 4. Core Engineering Principles
+
+All website development should follow these principles.
+
+### 4.1 Simplicity Before Complexity
+
+Use the simplest technology that satisfies the approved requirement.
+
+Do not introduce frameworks, libraries, build systems, or external services without a clear need.
+
+### 4.2 Standards Before Proprietary Dependencies
+
+Prefer open web standards and portable formats.
+
+Primary technologies should remain based on:
+
+- HTML
+- CSS
+- JavaScript
+- Markdown
+- SVG
+- JSON
+- Git
+
+### 4.3 Mobile-First Development
+
+Design and implement from smaller screens upward.
+
+Desktop layouts should extend the mobile experience rather than replace it.
+
+### 4.4 Performance by Design
+
+Performance must be considered during implementation, not only after development.
+
+### 4.5 Security by Design
+
+Security must be considered whenever adding forms, scripts, APIs, analytics, authentication, external services, or user data.
+
+### 4.6 Accessibility by Design
+
+Accessibility is a development requirement, not an optional enhancement.
+
+### 4.7 Reusability
+
+Repeated interface patterns should use reusable classes, tokens, components, or functions.
+
+### 4.8 Maintainability
+
+Code must remain understandable to future Nexsom developers.
+
+### 4.9 Progressive Enhancement
+
+Core content and navigation should remain usable even when optional JavaScript features fail.
+
+### 4.10 Controlled Evolution
+
+Technology may change when justified by business or technical requirements.
+
+Technology must not be adopted simply because it is popular.
+
+---
+
+## 5. Approved Current Technology Stack
+
+The current Website V2 implementation stack is:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Git
+- GitHub
+- VS Code
+- Cloudflare Pages / current Cloudflare website infrastructure
+- Markdown documentation
+
+Design work may use:
+
+- Penpot
+- Figma
+
+provided final assets are retained in portable formats.
+
+These tools are current implementation choices, not permanent architectural dependencies.
+
+---
+
+## 6. Technology Adoption Rule
+
+A new framework, library, plugin, service, platform, or integration must not be introduced until evaluated against:
+
+1. Business value
+2. Technical suitability
+3. Security
+4. Performance
+5. Maintainability
+6. Cost
+7. Scalability
+8. Data ownership
+9. Code ownership
+10. Migration difficulty
+11. Vendor-lock-in risk
+12. Community and ecosystem maturity
+13. Documentation quality
+14. Integration compatibility
+
+Examples of technologies that require evaluation before adoption include:
+
+- React
+- Next.js
+- Vue
+- Svelte
+- Astro
+- Node.js frameworks
+- CMS platforms
+- Analytics systems
+- Form services
+- Authentication providers
+- Third-party widgets
+- AI integrations
+- Payment systems
+
+No technology is pre-approved merely because it appears in a future roadmap.
+
+---
+
+## 7. Repository Structure
+
+The current website repository structure is:
+
+```text
 nexsomtech-website/
-│
-├── index.html
-├── so.html
-│
 ├── css/
-│ ├── style.css
-│ ├── responsive.css
-│ ├── animations.css
-│
-├── js/
-│ ├── script.js
-│ ├── animation.js
-│
-├── images/
-│ ├── logo/
-│ ├── icons/
-│ ├── illustrations/
-│ ├── screenshots/
-│
+│   └── style.css
 ├── docs/
-│
+│   ├── CHANGELOG.md
+│   ├── DECISIONS.md
+│   ├── DEVELOPMENT-STANDARDS.md
+│   └── ROADMAP.md
+├── images/
+├── js/
+│   └── script.js
+├── .gitignore
+├── index-v1.html
+├── index.html
 ├── README.md
-├── CHANGELOG.md
-├── ROADMAP.md
-├── DEVELOPMENT-STANDARDS.md
-
----
-
-# HTML Standards
-
-Use semantic HTML.
-
-Always use
-
-<header>
-
-<nav>
-
-<main>
-
-<section>
-
-<article>
-
-<footer>
-
-No inline CSS.
-
-No inline JavaScript.
-
----
-
-# CSS Standards
-
-Use CSS Variables.
-
-Use reusable classes.
-
-Avoid duplicate styles.
-
-Keep spacing consistent.
-
-Prefer Flexbox and Grid.
-
----
-
-# JavaScript Standards
-
-One responsibility per function.
-
-No unnecessary libraries.
-
-Write readable code.
-
-Comment only when necessary.
-
----
-
-# Image Standards
-
-Use SVG whenever possible.
-
-Compress PNG and JPG.
-
-Avoid large images.
-
-Prefer vector illustrations.
-
----
-
-# Naming Convention
-
-CSS
-
-kebab-case
-
-Example
-
-hero-section
-
-service-card
-
-primary-button
-
-JavaScript
-
-camelCase
-
-Example
-
-openMenu()
-
-closeMenu()
-
-HTML IDs
-
-camel-case
-
-Example
-
-hero
-
-services
-
-contact
-
----
-
-# Git Workflow
-
-Main
-
-Production
-
-website-v2
-
-Development
-
-Future branches
-
-feature/contact-form
-
-feature/blog
-
-feature/customer-portal
-
-bugfix/mobile-menu
-
----
-
-# Commit Messages
-
-Examples
-
-Create website structure
-
-Improve hero section
-
-Add services cards
-
-Fix responsive navigation
-
-Update branding colors
-
-Never use
-
-Update
-
-Changes
-
-Test
-
----
-
-# Performance Goals
-
-Google Lighthouse
-
-Performance
-
-95+
-
-Accessibility
-
-95+
-
-Best Practices
-
-100
-
-SEO
-
-100
-
----
-
-# Responsive Breakpoints
-
-Desktop
-
-1200+
-
-Laptop
-
-992+
-
-Tablet
-
-768+
-
-Mobile
-
-576+
-
-Small Mobile
-
-360+
-
----
-
-# SEO Standards
-
-Every page must include
-
-Title
-
-Description
-
-Open Graph tags
-
-Twitter tags
-
-Structured data
-
----
-
-# Accessibility
-
-Proper heading hierarchy.
-
-Keyboard navigation.
-
-Alt text.
-
-Good color contrast.
-
-Visible focus states.
-
----
-
-# Languages
-
-English
-
-Primary
-
-Somali
-
-Secondary
-
-Future
-
-Arabic
-
----
-
-# Future Technology
-
-React
-
-Next.js
-
-Node.js
-
-Cloudflare
-
-AI Services
-
-Customer Portal
-
-SaaS Platform
-
----
-
-# Company Rule
-
-Every improvement must make the website:
-
-Cleaner
-
-Faster
-
-More professional
-
-More useful
-
-More trustworthy
+└── wrangler.jsonc
