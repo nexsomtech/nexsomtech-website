@@ -1,156 +1,95 @@
-# Nexsom Technology
+# Nexsom Technology Website
+# Website V2 Roadmap
 
-# Roadmap
-
-This document defines the strategic roadmap for Nexsom Technology, including business, brand, website, product, software, hardware, and platform development.
-
-## Current Strategic Principle
-
-> We are not building a website. We are building a technology company.
-
-## Current Status
-
-### Milestone 1 — Foundation
-
-**Status:** Completed
-
-Completed items:
-
-- Domain registered
-- Business email configured
-- GitHub repository created
-- Cloudflare deployment configured
-- VS Code development environment configured
-- Git workflow established
-- Website Version 1 preserved
-- Project documentation structure created
+**Document ID:** NT-WEB-RM-001  
+**Version:** 2.0.0  
+**Status:** Active  
+**Effective Date:** 22 September 2026  
+**Product:** Nexsom Technology Website  
+**Owner:** Nexsom Technology  
+**Classification:** Product Governance / Delivery Roadmap  
+**Repository:** `nexsomtech-website`  
+**Development Branch:** `website-v2`  
+**Production Branch:** `main`  
+**Source Format:** Markdown  
 
 ---
 
-### Milestone 2 — Brand System
+## 1. Purpose
 
-**Status:** In Progress
+This roadmap defines the controlled development path for Nexsom Technology Website Version 2.
 
-Completed items:
+It translates approved company governance, brand standards, website technology principles, and engineering standards into an executable website-development sequence.
 
-- BRAND-SYSTEM.md created
-- Chapter 1 — Document Control completed and approved
-- Chapter 2 — Company Identity completed and approved
-- Official tagline approved:
-  - Smart Solutions. Stronger Businesses.
-- Internal motto approved:
-  - Build with purpose. Deliver with excellence.
-- Company Purpose approved
-- Positioning Statement approved
-- Long-Term Promise approved
-- Nexsom DNA approved
-- Governance rules approved
+This roadmap governs the website only.
 
-Remaining items:
+Company-level strategy is maintained separately in:
 
-- Chapter 3 — Brand Strategy
-- Chapter 4 — Logo System
-- Chapter 5 — Color System
-- Chapter 6 — Typography
-- Chapter 7 — Design System
-- Chapter 8 — Communication System
-- Chapter 9 — Customer Experience Principles
-- Chapter 10 — Product Identity
-- Chapter 11 — Brand Governance
-- Chapter 12 — Future Brand Evolution and Revision History
+> `nexsom-company-governance/docs/ROADMAP.md`
 
 ---
 
-### Milestone 3 — Website Version 2
+## 2. Current Website Status
 
-**Status:** Pending
+**Overall Status:** In Progress
 
-Website Version 2 will begin only after the Brand System is sufficiently approved.
+Website V2 development is taking place on:
 
-Planned deliverables:
+> `website-v2`
 
-- Professional homepage
-- English version
-- Somali version
-- Services section
-- Products section
-- POS solutions section
-- Industries section
-- Contact section
-- SEO optimization
-- Mobile responsiveness
-- Performance optimization
+The production website remains protected on:
+
+> `main`
+
+Website V2 must remain classified as:
+
+> `[Unreleased]`
+
+until it has been completed, reviewed, tested, approved, merged into `main`, and deployed to production.
 
 ---
 
-### Milestone 4 — POS Solutions Business
+## 3. Website Objective
 
-**Status:** Planned
+Website V2 should establish Nexsom Technology as a credible, professional, modern, and scalable technology company.
 
-Strategic direction:
+The website must clearly communicate:
 
-- Primary POS Platform: Loyverse POS
-- Enterprise Platform: Odoo POS
-- Long-term goal: Nexsom POS
+- Who Nexsom Technology is
+- What problems Nexsom solves
+- What services Nexsom provides
+- What products and solutions are available
+- Which customer segments Nexsom serves
+- Why customers should trust Nexsom
+- How customers can contact Nexsom
+- How the company can expand into future products and platforms
 
-Planned deliverables:
+The website is not the company itself.
 
-- POS software deployment packages
-- POS hardware packages
-- Installation and training model
-- Local support framework
-- Shelf-ready POS kits
-- Hardware sourcing and standardization
-- Warranty and maintenance model
-
----
-
-### Milestone 5 — Nexsom Product Platform
-
-**Status:** Planned
-
-Planned products:
-
-- Nexsom POS
-- Nexsom Inventory
-- Restaurant POS
-- Pharmacy POS
-- Dashboard Platform
-- Customer Portal
-- Mobile Apps
-- ERP modules
+It is the primary public digital representation of the company and an entry point into the future Nexsom technology ecosystem.
 
 ---
 
-### Milestone 6 — Nexsom Technology Ecosystem
+## 4. Governing Authorities
 
-**Status:** Long-Term Vision
+Website development must follow the approved authority hierarchy:
 
-Future expansion areas:
+1. Nexsom company governance
+2. Corporate Brand System
+3. Website Technology Strategy
+4. Website Architecture
+5. Website Development Standards
+6. Website Decisions Register
+7. Website Roadmap
+8. Implementation tasks
 
-- Cloud services
-- AI business tools
-- Cybersecurity services
-- API platform
-- Hardware branding
-- Regional expansion
-- Partner and reseller network
+Relevant authoritative documents include:
 
-## Guiding Principle
+### Company Governance
 
-Every milestone must support the approved Nexsom DNA:
-
-1. Practical Innovation
-2. Customer Success
-3. Reliability
-4. Simplicity
-5. Continuous Improvement
-
-## Roadmap Rule
-
-No major development should begin unless it aligns with:
-
-- BRAND-SYSTEM.md
-- DEVELOPMENT-STANDARDS.md
-- ROADMAP.md
-- DECISIONS.md
+```text
+nexsom-company-governance/docs/
+├── BRAND-SYSTEM.md
+├── CHANGELOG.md
+├── DECISIONS.md
+└── ROADMAP.md
